@@ -1,0 +1,12 @@
+# /Users/saharrachamim/.config/tmuxinator/webapp.yml
+
+name: webapp
+root: ~/Development/dev.azure.com/fundguard/webapp
+
+windows:
+  - output:
+      layout: main-vertical
+      panes:
+        - vim
+        - yarn start
+        - yarn test:watch

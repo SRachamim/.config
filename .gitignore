@@ -1,0 +1,15 @@
+/coc/list-location-history.json
+
+/configstore
+
+/spotify-tui
+
+/tags
+
+/vim/.netrwhist
+
+/zsh/.zcompdump
+/zsh/.zsh_sessions
+/zsh/.zsh_history
+
+node_modules

@@ -1,0 +1,9 @@
+# /Users/saharrachamim/.config/tmuxinator/downloads.yml
+
+name: downloads
+root: ~/Downloads
+
+windows:
+  - cli:
+      panes:
+        -

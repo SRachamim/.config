@@ -1,0 +1,3 @@
+[Save]
+; directory where to save files
+directory = $HOME/Downloads

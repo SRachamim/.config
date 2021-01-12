@@ -1,0 +1,202 @@
+" Vim configuration file
+
+" Source default settings{{{
+if !has('nvim')
+  unlet! skip_defaults_vim
+  source $VIMRUNTIME/defaults.vim
+endif
+" }}}
+
+" Set basic settings {{{
+set laststatus  =2         " Always show statusline.
+set showmode               " Show current mode in command-line.
+set hlsearch               " Keep matches highlighted.
+set ttyfast                " Faster redrawing.
+set lazyredraw             " Only redraw when necessary.
+set splitbelow             " Open new windows below the current window.
+set splitright             " Open new windows right of the current window.
+set wrapscan               " Searches wrap around end-of-file.
+set report      =0         " Always report changed lines.
+set synmaxcol   =200       " Only highlight the first 200 columns.
+set encoding=utf-8         " use utf-8 encoding
+set autoread               " automatically reload buffers
+set number                 " show line numbers
+set termguicolors          " suuport TrueColors
+set noswapfile
+set breakindent
+
+" TextEdit might fail if hidden is not set.
+set hidden
+
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
+
+" Set grep programm to use ripgrep{{{2
+if executable("rg")
+    set grepprg=rg\ --vimgrep\ --no-heading
+    set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+" }}}2
+" }}}
+
+" Set vim files settings{{{
+set updatecount =100
+set undofile
+set undodir     =$HOME/.vim/files/undo/
+set viminfo     ='100,n$HOME/.vim/files/info/viminfo
+
+" Create directories if needed {{{2
+if !isdirectory($XDG_CONFIG_HOME.'/vim/files') && exists('*mkdir')
+  call mkdir($XDG_CONFIG_HOME.'/vim/files')
+  call mkdir($XDG_CONFIG_HOME.'/vim/files/undo')
+  call mkdir($XDG_CONFIG_HOME.'/vim/files/info')
+endif
+" }}}2
+" }}}
+
+" Set mappings {{{
+
+" Map <Leader> to `\`
+let mapleader = "\<Space>"
+
+" Map <Ctrl-l> to also: {{{2
+" - Stop the highlighting for the 'hlsearch' option.
+" - Update the diff highlighting and folds.
+" - The file will be parsed from the start.
+" - Clear and redraw the screen.
+nnoremap <c-l> :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
+" }}}2
+" }}}
+
+if !has('nvim')
+  set viminfo+=n~/vim/viminfo
+else
+  " Do nothing here to use the neovim default
+  " or do soemething like:
+  " set viminfo+=n~/.shada
+endif
+
+" Set region to English
+set spelllang=en_gb
+
+"""""""""""""""""""""
+" AIRLINE
+"""""""""""""""""""""
+
+" Enabling Powerline symbols
+let g:airline_powerline_fonts = 1
+
+" Allows word counting in the following filetypes
+let g:airline#extensions#wordcount#filetypes = '\vasciidoc|help|mail|markdown|pandoc|org|rst|tex|text'
+
+" Shows all buffers when only one tab open
+let g:airline#extensions#tabline#enabled = 1
+
+" Handles file path displays
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+" Sets theme for airline
+let g:airline_theme='gruvbox'
+
+""""""""""""""""""""""""""""""
+" GRUVBOX
+""""""""""""""""""""""""""""""
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_italic=1
+colorscheme gruvbox
+set background=dark " Setting dark mode
+
+"""""""""""""""""""""
+" FZF
+"""""""""""""""""""""
+set rtp+=$FZF/share/vim-plugins/fzf
+
+nnoremap <Leader>T :Tags<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>h :History<CR>
+nnoremap <Leader>p :Files<CR>
+nnoremap <Leader>t :BTags<CR>
+
+""""""""""""""""""
+" coc
+""""""""""""""""""
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Applying codeAction to the selected region.
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Map function and class text objects
+" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+xmap ic <Plug>(coc-classobj-i)
+omap ic <Plug>(coc-classobj-i)
+xmap ac <Plug>(coc-classobj-a)
+omap ac <Plug>(coc-classobj-a)
+
+" Remap <C-f> and <C-b> for scroll float windows/popups.
+if has('nvim-0.4.0') || has('patch-8.2.0750')
+  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+endif
+
+set conceallevel=1

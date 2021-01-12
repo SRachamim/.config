@@ -1,0 +1,14 @@
+# /Users/saharrachamim/.config/tmuxinator/personal.yml
+
+name: personal
+root: ~/.config
+
+windows:
+  - dev:
+      layout: main-vertical
+      panes:
+        - vim
+        -
+  - spotify:
+      panes:
+        - spt

@@ -1,0 +1,12 @@
+# /Users/saharrachamim/.config/tmuxinator/gql-api.yml
+
+name: gql-api
+root: ~/Development/dev.azure.com/fundguard/gql-api
+
+windows:
+  - output:
+      layout: main-vertical
+      panes:
+        - vim
+        - yarn start
+        - yarn test:watch
