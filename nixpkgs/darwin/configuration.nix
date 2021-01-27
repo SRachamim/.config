@@ -19,6 +19,7 @@
       pkgs.neofetch
       pkgs.neovim
       pkgs.nodejs-14_x
+      pkgs.openvpn
       pkgs.pirate-get
       pkgs.python38Packages.subliminal
       pkgs.ranger
