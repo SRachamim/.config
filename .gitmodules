@@ -19,9 +19,6 @@
 [submodule "vim/pack/tpope/start/vim-unimpaired"]
 	path = vim/pack/tpope/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
-[submodule "vim/pack/morhetz/start/gruvbox"]
-	path = vim/pack/morhetz/start/gruvbox
-	url = https://github.com/morhetz/gruvbox
 [submodule "vim/pack/vim-airline/start/vim-airline"]
 	path = vim/pack/vim-airline/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
@@ -34,3 +31,6 @@
 [submodule "vim/pack/ludovicchabant/start/vim-gutentags"]
 	path = vim/pack/ludovicchabant/start/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags
+[submodule "vim/pack/twerth/start/ir_black"]
+	path = vim/pack/twerth/start/ir_black
+	url = https://github.com/twerth/ir_black

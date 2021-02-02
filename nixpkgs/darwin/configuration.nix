@@ -28,7 +28,6 @@
       pkgs.spaceship-prompt
       pkgs.speedtest-cli
       pkgs.spotify-tui
-      pkgs.tmuxPlugins.gruvbox
       pkgs.tmuxPlugins.urlview
       pkgs.tmuxinator
       pkgs.translate-shell
@@ -71,14 +70,9 @@
       set -g base-index 1
       setw -g pane-base-index 1
 
-      # set theme
-      set -g @tmux-gruvbox 'dark'
-
       # prevent escape delay
       set -sg escape-time 0
 
-      # enable theme
-      run-shell ${pkgs.tmuxPlugins.gruvbox.rtp}
       run-shell ${pkgs.tmuxPlugins.urlview.rtp}
     '';
 

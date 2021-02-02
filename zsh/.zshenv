@@ -1,4 +1,4 @@
-export BAT_THEME="gruvbox"
+export BAT_THEME="TwoDark"
 export EDITOR="vim"
 export FZF_DEFAULT_COMMAND="rg --files --follow --hidden"
 export VISUAL="vim"

@@ -116,15 +116,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " Sets theme for airline
-let g:airline_theme='gruvbox'
-
-""""""""""""""""""""""""""""""
-" GRUVBOX
-""""""""""""""""""""""""""""""
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_italic=1
-colorscheme gruvbox
-set background=dark " Setting dark mode
+let g:airline_theme='dark'
 
 """""""""""""""""""""
 " FZF
@@ -200,3 +192,5 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
 endif
 
 set conceallevel=1
+
+colorscheme ir_black
