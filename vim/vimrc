@@ -24,6 +24,7 @@ set number                 " show line numbers
 set termguicolors          " suuport TrueColors
 set noswapfile
 set breakindent
+set cursorline
 
 " TextEdit might fail if hidden is not set.
 set hidden
