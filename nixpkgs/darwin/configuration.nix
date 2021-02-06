@@ -28,6 +28,7 @@
       pkgs.spaceship-prompt
       pkgs.speedtest-cli
       pkgs.spotify-tui
+      pkgs.stig
       pkgs.tmuxPlugins.urlview
       pkgs.tmuxinator
       pkgs.translate-shell
