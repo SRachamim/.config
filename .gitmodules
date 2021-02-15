@@ -34,3 +34,9 @@
 [submodule "vim/pack/twerth/start/ir_black"]
 	path = vim/pack/twerth/start/ir_black
 	url = https://github.com/twerth/ir_black
+[submodule "vim/pack/tpope/start/vim-abolish"]
+	path = vim/pack/tpope/start/vim-abolish
+	url = https://github.com/tpope/vim-abolish
+[submodule "vim/pack/tpope/start/vim-repeat"]
+	path = vim/pack/tpope/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat
