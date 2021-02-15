@@ -11,6 +11,8 @@
       pkgs.curl
       pkgs.fzf
       pkgs.git
+      pkgs.hledger
+      pkgs.hledger-ui
       pkgs.imagemagick7
       pkgs.jq
       pkgs.kitty
