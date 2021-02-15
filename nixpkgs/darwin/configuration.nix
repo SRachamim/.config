@@ -25,6 +25,7 @@
       pkgs.ranger
       pkgs.ripgrep
       pkgs.ruby_2_7
+      pkgs.scheme48
       pkgs.spaceship-prompt
       pkgs.speedtest-cli
       pkgs.spotify-tui
