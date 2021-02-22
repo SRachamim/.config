@@ -195,3 +195,5 @@ endif
 set conceallevel=1
 
 colorscheme ir_black
+
+let g:slime_target = "tmux"

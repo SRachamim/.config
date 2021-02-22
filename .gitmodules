@@ -43,3 +43,6 @@
 [submodule "vim/pack/ledger/start/vim-ledger"]
 	path = vim/pack/ledger/start/vim-ledger
 	url = https://github.com/ledger/vim-ledger
+[submodule "vim/pack/jpalardy/start/vim-slime"]
+	path = vim/pack/jpalardy/start/vim-slime
+	url = https://github.com/jpalardy/vim-slime
