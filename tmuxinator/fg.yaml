@@ -1,0 +1,25 @@
+# /Users/saharrachamim/.config/tmuxinator/gql-api.yml
+
+name: fg
+root: ~/Development/dev.azure.com/fundguard/fgrepo/client
+
+windows:
+  - client:
+      layout: main-vertical
+      panes:
+        - vim
+        -
+  - api:
+      layout: main-vertical
+      pre: cd packages/gql-api
+      panes:
+        - vim
+        - yarn start
+        - yarn test:watch
+  - web-ui:
+      layout: main-vertical
+      pre: cd packages/webapp
+      panes:
+        - vim
+        - yarn start
+        - yarn test:watch
