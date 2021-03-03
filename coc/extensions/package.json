@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "coc-eslint": ">=1.4.5",
+    "coc-sh": ">=0.6.0",
     "coc-tsserver": ">=1.6.7"
   }
 }
