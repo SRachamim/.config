@@ -20,13 +20,11 @@
       pkgs.mpv
       pkgs.neofetch
       pkgs.neovim
-      pkgs.nodejs-14_x
       pkgs.openvpn
       pkgs.pirate-get
       pkgs.python38Packages.subliminal
       pkgs.ranger
       pkgs.ripgrep
-      pkgs.ruby_2_7
       pkgs.scheme48
       pkgs.spaceship-prompt
       pkgs.speedtest-cli
@@ -36,7 +34,6 @@
       pkgs.tmuxinator
       pkgs.translate-shell
       pkgs.tree
-      pkgs.yarn
       pkgs.youtube-dl
       pkgs.zsh-autosuggestions
     ];
