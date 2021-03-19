@@ -1,4 +1,4 @@
-export BAT_THEME="TwoDark"
+export BAT_THEME="Dracula"
 export EDITOR="vim"
 export FZF_DEFAULT_COMMAND="rg --files --follow --hidden"
 export LEDGER_FILE=~/finance/2021.journal

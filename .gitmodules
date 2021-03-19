@@ -31,9 +31,6 @@
 [submodule "vim/pack/ludovicchabant/start/vim-gutentags"]
 	path = vim/pack/ludovicchabant/start/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags
-[submodule "vim/pack/twerth/start/ir_black"]
-	path = vim/pack/twerth/start/ir_black
-	url = https://github.com/twerth/ir_black
 [submodule "vim/pack/tpope/start/vim-abolish"]
 	path = vim/pack/tpope/start/vim-abolish
 	url = https://github.com/tpope/vim-abolish
@@ -46,3 +43,6 @@
 [submodule "vim/pack/jpalardy/start/vim-slime"]
 	path = vim/pack/jpalardy/start/vim-slime
 	url = https://github.com/jpalardy/vim-slime
+[submodule "vim/pack/themes/start/dracula"]
+	path = vim/pack/themes/start/dracula
+	url = https://github.com/dracula/vim

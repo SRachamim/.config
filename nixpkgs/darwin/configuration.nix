@@ -31,7 +31,7 @@
       pkgs.speedtest-cli
       pkgs.spotify-tui
       pkgs.stig
-      pkgs.tmuxPlugins.urlview
+      pkgs.tmux
       pkgs.tmuxinator
       pkgs.translate-shell
       pkgs.tree
@@ -51,32 +51,6 @@
     [
       pkgs.nerdfonts
     ];
-
-  programs.tmux.enable = true;
-
-  programs.tmux.enableFzf = true;
-
-  programs.tmux.enableSensible = true;
-
-  programs.tmux.enableVim = true;
-
-  programs.tmux.extraConfig =
-    ''
-      set -g default-terminal "screen-256color"
-      set-option -sa terminal-overrides ",xterm-kitty:RGB"
-
-      # set shell to the default one
-      set-option -g default-shell $SHELL
-
-      # Start windows and panes at 1, not 0
-      set -g base-index 1
-      setw -g pane-base-index 1
-
-      # prevent escape delay
-      set -sg escape-time 0
-
-      run-shell ${pkgs.tmuxPlugins.urlview.rtp}
-    '';
 
   programs.zsh.enable = true;
 
@@ -99,6 +73,4 @@
   system.keyboard.remapCapsLockToEscape = true;
 
   system.stateVersion = 4;
-
-  users.nix.configureBuildUsers = true;
 }

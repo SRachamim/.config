@@ -117,7 +117,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " Sets theme for airline
-let g:airline_theme='dark'
+let g:airline_theme='dracula'
 
 """""""""""""""""""""
 " FZF
@@ -194,6 +194,7 @@ endif
 
 set conceallevel=1
 
-colorscheme ir_black
+packadd! dracula
+colorscheme dracula
 
 let g:slime_target = "tmux"
