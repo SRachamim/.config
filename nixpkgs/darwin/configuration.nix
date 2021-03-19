@@ -27,9 +27,9 @@
       pkgs.ranger
       pkgs.ripgrep
       pkgs.scheme48
-      pkgs.spaceship-prompt
       pkgs.speedtest-cli
       pkgs.spotify-tui
+      pkgs.starship
       pkgs.stig
       pkgs.tmux
       pkgs.tmuxinator
@@ -58,7 +58,6 @@
 
   programs.zsh.interactiveShellInit =
     ''
-      source ${pkgs.spaceship-prompt}/share/zsh/themes/spaceship.zsh-theme
       source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     '';
 
