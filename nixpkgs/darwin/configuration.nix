@@ -100,4 +100,5 @@
 
   system.stateVersion = 4;
 
+  users.nix.configureBuildUsers = true;
 }
