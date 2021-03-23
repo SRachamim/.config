@@ -6,7 +6,6 @@
   environment.systemPackages =
     [
       pkgs.bat
-      pkgs.castnow
       pkgs.ctags
       pkgs.curl
       pkgs.fzf
