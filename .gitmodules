@@ -46,3 +46,6 @@
 [submodule "vim/pack/themes/start/dracula"]
 	path = vim/pack/themes/start/dracula
 	url = https://github.com/dracula/vim
+[submodule "vim/pack/godlygeek/start/tabular"]
+	path = vim/pack/godlygeek/start/tabular
+	url = https://github.com/godlygeek/tabular
