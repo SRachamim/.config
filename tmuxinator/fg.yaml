@@ -9,14 +9,14 @@ windows:
       panes:
         - vim
         -
-  - api:
+  - gql-api:
       layout: main-vertical
       pre: cd packages/gql-api
       panes:
         - vim
         - yarn start
         - yarn test:watch
-  - web-ui:
+  - webapp:
       layout: main-vertical
       pre: cd packages/webapp
       panes:
