@@ -11,6 +11,7 @@
       pkgs.fzf
       pkgs.git
       pkgs.glow
+      pkgs.gnused
       pkgs.hledger
       pkgs.hledger-ui
       pkgs.imagemagick7
