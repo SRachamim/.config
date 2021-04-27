@@ -5,24 +5,32 @@
 
   environment.systemPackages =
     [
+      pkgs.azure-cli
       pkgs.bat
+      pkgs.csvkit
       pkgs.ctags
       pkgs.curl
       pkgs.fzf
+      pkgs.gawk
       pkgs.git
+      pkgs.gitAndTools.gh
       pkgs.glow
+      pkgs.gnugrep
+      pkgs.gnumake
       pkgs.gnused
       pkgs.hledger
       pkgs.hledger-ui
       pkgs.imagemagick7
       pkgs.jq
       pkgs.kitty
+      pkgs.less
       pkgs.lsd
       pkgs.mpv
       pkgs.neofetch
       pkgs.neovim
       pkgs.openvpn
       pkgs.pirate-get
+      pkgs.pup
       pkgs.python38Packages.subliminal
       pkgs.ranger
       pkgs.ripgrep
@@ -31,10 +39,12 @@
       pkgs.spotify-tui
       pkgs.starship
       pkgs.stig
+      pkgs.telnet
       pkgs.tmux
       pkgs.tmuxinator
       pkgs.translate-shell
       pkgs.tree
+      pkgs.unixtools.column
       pkgs.youtube-dl
       pkgs.zsh-autosuggestions
     ];
