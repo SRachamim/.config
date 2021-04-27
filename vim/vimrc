@@ -259,3 +259,6 @@ let g:gutentags_ctags_exclude = [
       \ '*.rar', '*.zip', '*.tar', '*.tar.gz', '*.tar.xz', '*.tar.bz2',
       \ '*.pdf', '*.doc', '*.docx', '*.ppt', '*.pptx',
       \ ]
+
+command Curl set splitright | vnew | set filetype=json | read !sh # | jq '.'
+let g:vim_json_syntax_conceal = 1
