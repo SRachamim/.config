@@ -64,6 +64,8 @@
 
   programs.zsh.enable = true;
 
+  programs.zsh.enableFzfCompletion = true;
+
   programs.zsh.enableSyntaxHighlighting = true;
 
   programs.zsh.interactiveShellInit =
