@@ -5,6 +5,12 @@
   last = log -1 HEAD
   st = status
   unstage = reset HEAD --
+  pr-ls = !~/.config/sd/pr/list.sh
+  pr-co = !~/.config/sd/pr/checkout.sh
+  files = !git diff --name-only $(git merge-base HEAD develop)
+  stat = !git diff --stat $(git merge-base HEAD develop)
+  review = !nvim -p $(git files) +\"tabdo Gdiff develop\" +\"let g:gitgutter_diff_base = 'develop'\"
+
 
 [core]
   editor = nvim
