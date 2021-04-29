@@ -35,6 +35,7 @@
       pkgs.ranger
       pkgs.ripgrep
       pkgs.scheme48
+      pkgs.shfmt
       pkgs.speedtest-cli
       pkgs.spotify-tui
       pkgs.starship
