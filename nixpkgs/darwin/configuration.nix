@@ -7,9 +7,9 @@
     [
       pkgs.azure-cli
       pkgs.bat
-      pkgs.csvkit
       pkgs.ctags
       pkgs.curl
+      pkgs.emacs
       pkgs.fzf
       pkgs.gawk
       pkgs.git
@@ -29,11 +29,13 @@
       pkgs.neofetch
       pkgs.neovim
       pkgs.openvpn
+      pkgs.perl
+      pkgs.perl532Packages.CPAN
       pkgs.pirate-get
       pkgs.pup
-      pkgs.python38Packages.subliminal
       pkgs.ranger
       pkgs.ripgrep
+      pkgs.ruby
       pkgs.scheme48
       pkgs.shfmt
       pkgs.speedtest-cli

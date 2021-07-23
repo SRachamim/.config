@@ -134,6 +134,15 @@ nnoremap <Leader>t :BTags<CR>
 " coc
 """"""""""""""""""
 
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("nvim-0.5.0") || has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
+
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -157,6 +166,9 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -192,7 +204,10 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
   vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
 
-set conceallevel=1
+" Add (Neo)Vim's native statusline support.
+" NOTE: Please see `:h coc-status` for integrations with external plugins that
+" provide custom statusline: lightline.vim, vim-airline.
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 packadd! dracula
 colorscheme dracula
@@ -201,7 +216,7 @@ let g:slime_target = "tmux"
 
 " gutentags
 let g:gutentags_add_default_project_roots = 0
-let g:gutentags_project_root = ['package.json', '.git']
+let g:gutentags_project_root = ['package.json']
 let g:gutentags_generate_on_new = 1
 let g:gutentags_generate_on_missing = 1
 let g:gutentags_generate_on_write = 1
@@ -262,3 +277,14 @@ let g:gutentags_ctags_exclude = [
 
 command Curl set splitright | vnew | set filetype=json | read !sh # | jq '.'
 let g:vim_json_syntax_conceal = 1
+
+let g:typescript_conceal_function             = "ƒ"
+let g:typescript_conceal_null                 = "ø"
+let g:typescript_conceal_undefined            = "¿"
+let g:typescript_conceal_this                 = "@"
+let g:typescript_conceal_return               = "⇚"
+let g:typescript_conceal_prototype            = "¶"
+let g:typescript_conceal_super                = "Ω"
+set re=0
+set conceallevel=1
+

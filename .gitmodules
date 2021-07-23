@@ -55,3 +55,6 @@
 [submodule "vim/pack/airblade/start/vim-gitgutter"]
 	path = vim/pack/airblade/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+[submodule "vim/pack/rhysd/start/git-messenger.vim"]
+	path = vim/pack/rhysd/start/git-messenger.vim
+	url = https://github.com/rhysd/git-messenger.vim
