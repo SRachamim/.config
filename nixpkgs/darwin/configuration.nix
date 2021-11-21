@@ -18,13 +18,15 @@
       pkgs.gnugrep
       pkgs.gnumake
       pkgs.gnused
-      pkgs.hledger
-      pkgs.hledger-ui
+      pkgs.gomuks
       pkgs.imagemagick7
+      pkgs.joplin
       pkgs.jq
       pkgs.kitty
+      pkgs.kubectl
       pkgs.less
       pkgs.lsd
+      pkgs.minisign
       pkgs.mpv
       pkgs.neofetch
       pkgs.neovim
@@ -43,6 +45,7 @@
       pkgs.starship
       pkgs.stig
       pkgs.telnet
+      pkgs.ticker
       pkgs.tmux
       pkgs.tmuxinator
       pkgs.translate-shell
@@ -50,6 +53,7 @@
       pkgs.unixtools.column
       pkgs.youtube-dl
       pkgs.zsh-autosuggestions
+      pkgs.zulip-term
     ];
 
   environment.variables =
